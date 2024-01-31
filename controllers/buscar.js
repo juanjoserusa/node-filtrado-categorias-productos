@@ -84,7 +84,7 @@ const buscarProducto = async(termino='', res) => {
      }).populate('usuario','nombre').populate('categoria','nombre');
 
 
-    res.json({
+    res.status(200).json({
         results: productos
     });
 
